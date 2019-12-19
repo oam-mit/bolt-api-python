@@ -14,6 +14,7 @@ url_list = {
     'restart' : '{}/restart?&deviceName={}',
     'isAlive' : '{}/isAlive?&deviceName={}',
     'isOnline' : '{}/isOnline?&deviceName={}',
+    'servoWrite':'{}/servoWrite?pin={}&value={}&deviceName={}',
 }
 
 def url(operation):

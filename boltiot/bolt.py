@@ -174,3 +174,22 @@ class Bolt():
         :rtype: JSON
         """
         return request_from(url('isOnline'), self.api_key, self.device_id)
+    
+    def servoWrite(self,pin,state):
+        '''
+        The command is for Pro-Users and for firmware 1.4.0 and above.
+        Parameters: 
+        
+        pin: It is the Bolt GPIO connected to the servo motor that you want to control. It can take any 	of the following values 
+        0, 1, 2, 3, 4.
+
+        state: angle to which the motor needs to be rotated
+
+        :returns : request status, value
+
+        :example : {"value": "1", "success": 1}
+
+        :rtype: JSON 
+
+        '''
+        return request_from(url('servoWrite'), self.api_key , pin, state, self.device_id)
